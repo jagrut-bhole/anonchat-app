@@ -78,4 +78,13 @@
   --color-tab-badge-text: var(--color-tab-badge-text);
   --color-tab-shadow: var(--color-tab-shadow);
   --color-tab-ripple: var(--color-tab-ripple);
+
+  /* fonts */
+  --font-manrope: font-regular;
+  --font-manrope-medium: font-medium;
+  --font-manrope-semibold: font-semibold;
+  --font-manrope-bold: font-bold;
+  --font-manrope-extrabold: font-extrabold;
+  --font-manrope-extralight: font-extralight;
+  --font-manrope-light: font-light;
 }
