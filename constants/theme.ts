@@ -30,3 +30,19 @@ export const TAB_BAR = {
   /** Badge font size */
   BADGE_FONT: 10,
 } as const;
+
+export const accentPresets = [
+  { name: 'Gold',    hex: '#F5C440' },
+  { name: 'Emerald', hex: '#2ED573' },
+  { name: 'Blue',    hex: '#3B82F6' },
+  { name: 'Violet',  hex: '#A78BFA' },
+  { name: 'Rose',    hex: '#FF6B9D' },
+  { name: 'Crimson', hex: '#FF4D4D' },
+];
+
+export const themeColors = {
+  background: '#000000',
+  backgroundSoft: '#1C1000',
+  accent: '#F5C440',   // keep in sync with --accent in global.css
+  glow: '#F5C440',     // keep in sync with --glow in global.css
+};
