@@ -4,12 +4,12 @@ import {styled} from "nativewind";
 
 const SafeAreaView = styled(RNSafeAreaView);
 
-const LiveChat = () => {
+const Settings = () => {
   return (
     <SafeAreaView className="flex-1 items-center justify-center bg-white">
-      <Text className="text-xl font-bold text-gray-800">Live Chat</Text>
+      <Text className="text-xl font-bold text-gray-800">Settings</Text>
     </SafeAreaView>
   );
 };
 
-export default LiveChat;
+export default Settings;

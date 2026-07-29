@@ -8,49 +8,62 @@
 
 :root {
   /* Brand */
-  --color-background: #fff9e3;
-  --color-foreground: #081126;
-  --color-card: #fff8e7;
-  --color-muted: #f6eecf;
-  --color-muted-foreground: rgba(0, 0, 0, 0.6);
-  --color-primary: #081126;
-  --color-accent: #ea7a53;
-  --color-border: rgba(0, 0, 0, 0.1);
+  --color-background: #000000;
+  --color-foreground: #f0f0f0;
+  --color-card: #1a1c24;
+  --color-muted: #2a2d38;
+  --color-muted-foreground: rgba(255, 255, 255, 0.6);
+  --color-primary: #f0f0f0;
+  --color-accent: #F5C440;
+  --color-border: rgba(255, 255, 255, 0.1);
   --color-success: #16a34a;
   --color-destructive: #dc2626;
   --color-subscription: #8fd1bd;
 
-  /* Tab bar – light */
-  --color-tab-tint: rgba(255, 255, 255, 0.72);
-  --color-tab-active: #2B6CB0;
-  --color-tab-inactive: #6B7280;
-  --color-tab-active-bg: rgba(43, 108, 176, 0.12);
-  --color-tab-badge-bg: #E53E3E;
-  --color-tab-badge-text: #FFFFFF;
-  --color-tab-shadow: rgba(0, 0, 0, 0.12);
-  --color-tab-ripple: rgba(43, 108, 176, 0.18);
+  /* Tab bar – dark */
+  --color-tab-tint: rgba(30, 30, 30, 0.72);
+  --color-tab-active: #63b3ed;
+  --color-tab-inactive: #a0aec0;
+  --color-tab-active-bg: rgba(99, 179, 237, 0.16);
+  --color-tab-badge-bg: #fc8181;
+  --color-tab-badge-text: #1a202c;
+  --color-tab-shadow: rgba(0, 0, 0, 0.4);
+  --color-tab-ripple: rgba(99, 179, 237, 0.22);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    /* backgrounds */
+    --background: 0 0% 0%; /* pure black base */
+    --background-soft: 30 65% 6%; /* warm dark stop used in gradients */
+    --foreground: 40 20% 96%;
+    --muted: 30 8% 14%;
+    --muted-foreground: 30 6% 60%;
+    --card: 30 15% 8%;
+    --border: 30 10% 20%;
+
+    --accent: 45 89% 63%; /* default gold #F5C440 */
+    --accent-foreground: 30 30% 8%;
+    --glow: 45 89% 63%; /* orb color — usually same as accent */
+
     /* Brand (dark overrides) */
-    --color-background: #0f1117;
+    --color-background: #000000;
     --color-foreground: #f0f0f0;
     --color-card: #1a1c24;
     --color-muted: #2a2d38;
     --color-muted-foreground: rgba(255, 255, 255, 0.6);
     --color-primary: #f0f0f0;
-    --color-accent: #ea7a53;
+    --color-accent: #F5C440;
     --color-border: rgba(255, 255, 255, 0.1);
 
     /* Tab bar – dark */
     --color-tab-tint: rgba(30, 30, 30, 0.72);
-    --color-tab-active: #63B3ED;
-    --color-tab-inactive: #A0AEC0;
+    --color-tab-active: #63b3ed;
+    --color-tab-inactive: #a0aec0;
     --color-tab-active-bg: rgba(99, 179, 237, 0.16);
-    --color-tab-badge-bg: #FC8181;
-    --color-tab-badge-text: #1A202C;
-    --color-tab-shadow: rgba(0, 0, 0, 0.40);
+    --color-tab-badge-bg: #fc8181;
+    --color-tab-badge-text: #1a202c;
+    --color-tab-shadow: rgba(0, 0, 0, 0.4);
     --color-tab-ripple: rgba(99, 179, 237, 0.22);
   }
 }
@@ -78,4 +91,13 @@
   --color-tab-badge-text: var(--color-tab-badge-text);
   --color-tab-shadow: var(--color-tab-shadow);
   --color-tab-ripple: var(--color-tab-ripple);
+
+  /* fonts */
+  --font-manrope: font-regular;
+  --font-manrope-medium: font-medium;
+  --font-manrope-semibold: font-semibold;
+  --font-manrope-bold: font-bold;
+  --font-manrope-extrabold: font-extrabold;
+  --font-manrope-extralight: font-extralight;
+  --font-manrope-light: font-light;
 }
