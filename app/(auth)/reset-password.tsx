@@ -13,7 +13,6 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
-
 const SafeAreaView = styled(RNSafeAreaView);
 
 export default function ResetPasswordScreen() {
@@ -71,7 +70,13 @@ export default function ResetPasswordScreen() {
                 color={emailFocused ? "#F5C440" : "#6b6b6b"}
               />
               <TextInput
-                className="flex-1 ml-3 text-foreground font-manrope text-base"
+                style={{
+                  flex: 1,
+                  marginLeft: 12,
+                  color: "#f0f0f0",
+                  fontSize: 16,
+                  fontFamily: "font-regular",
+                }}
                 placeholder="enter your email..."
                 placeholderTextColor="hsl(30 6% 60%)"
                 value={email}

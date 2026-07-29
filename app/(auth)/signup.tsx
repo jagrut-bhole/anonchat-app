@@ -1,6 +1,6 @@
 import GlowBackground from "@/components/landingScreen/GlowBackground";
 import { Feather } from "@expo/vector-icons";
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import { styled } from "nativewind";
 import { useState } from "react";
 import {
@@ -17,7 +17,9 @@ import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
 const SafeAreaView = styled(RNSafeAreaView);
 
 export default function SignupScreen() {
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailFocused, setEmailFocused] = useState(false);
@@ -74,7 +76,13 @@ export default function SignupScreen() {
                 color={emailFocused ? "#F5C440" : "#6b6b6b"}
               />
               <TextInput
-                className="flex-1 ml-3 text-foreground font-manrope text-base"
+                style={{
+                  flex: 1,
+                  marginLeft: 12,
+                  color: "#f0f0f0",
+                  fontSize: 16,
+                  fontFamily: "font-regular",
+                }}
                 placeholder="Ghost in the machine"
                 placeholderTextColor="hsl(30 6% 60%)"
                 value={email}
@@ -101,7 +109,13 @@ export default function SignupScreen() {
                 color={passwordFocused ? "#F5C440" : "#6b6b6b"}
               />
               <TextInput
-                className="flex-1 ml-3 text-foreground font-manrope text-base"
+                style={{
+                  flex: 1,
+                  marginLeft: 12,
+                  color: "#f0f0f0",
+                  fontSize: 16,
+                  fontFamily: "font-regular",
+                }}
                 placeholder="••••••••••••"
                 placeholderTextColor="hsl(30 6% 60%)"
                 value={password}
@@ -123,7 +137,9 @@ export default function SignupScreen() {
             </View>
 
             {/* Sign Up Button */}
-            <Pressable className="bg-accent rounded-full h-14 items-center justify-center mt-8">
+            <Pressable 
+              className="bg-accent rounded-full h-14 items-center justify-center mt-8"
+              onPress={() => router.push("/verify-account")}>
               <Text className="text-accent-foreground font-manrope-bold text-base tracking-widest">
                 SIGN UP
               </Text>

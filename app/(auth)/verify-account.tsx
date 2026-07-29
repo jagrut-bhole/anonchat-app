@@ -1,5 +1,6 @@
 import GlowBackground from "@/components/landingScreen/GlowBackground";
 import { Feather } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 import { styled } from "nativewind";
 import { useRef, useState } from "react";
 import {
@@ -18,7 +19,9 @@ const SafeAreaView = styled(RNSafeAreaView);
 const OTP_LENGTH = 6;
 
 export default function VerifyAccountScreen() {
+  const router = useRouter();
   const [otp, setOtp] = useState<string[]>(Array(OTP_LENGTH).fill(""));
+
   const [focusedIndex, setFocusedIndex] = useState<number | null>(0);
   const inputRefs = useRef<(TextInput | null)[]>([]);
 
@@ -94,7 +97,14 @@ export default function VerifyAccountScreen() {
                   ref={(ref) => {
                     inputRefs.current[index] = ref;
                   }}
-                  className="text-center text-foreground font-manrope-bold text-xl w-full h-full"
+                  style={{
+                    textAlign: "center",
+                    color: "#f0f0f0",
+                    fontSize: 20,
+                    width: "100%",
+                    height: "100%",
+                    fontFamily: "font-bold",
+                  }}
                   value={otp[index]}
                   onChangeText={(text) => handleOtpChange(text, index)}
                   onKeyPress={({ nativeEvent }) =>
@@ -120,7 +130,9 @@ export default function VerifyAccountScreen() {
           </Pressable>
 
           {/* ── Verify Button ── */}
-          <Pressable className="w-full bg-accent rounded-full h-14 items-center justify-center">
+          <Pressable 
+            onPress={() => router.replace("/home")}
+            className="w-full bg-accent rounded-full h-14 items-center justify-center">
             <Text className="text-accent-foreground font-manrope-bold text-base tracking-widest">
               VERIFY
             </Text>

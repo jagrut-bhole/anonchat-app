@@ -74,7 +74,13 @@ export default function SigninScreen() {
                 color={emailFocused ? "#F5C440" : "#6b6b6b"}
               />
               <TextInput
-                className="flex-1 ml-3 text-foreground font-manrope text-base"
+                style={{
+                  flex: 1,
+                  marginLeft: 12,
+                  color: "#f0f0f0",
+                  fontSize: 16,
+                  fontFamily: "font-regular",
+                }}
                 placeholder="Ghost in the machine"
                 placeholderTextColor="hsl(30 6% 60%)"
                 value={email}
@@ -101,7 +107,13 @@ export default function SigninScreen() {
                 color={passwordFocused ? "#F5C440" : "#6b6b6b"}
               />
               <TextInput
-                className="flex-1 ml-3 text-foreground font-manrope text-base"
+                style={{
+                  flex: 1,
+                  marginLeft: 12,
+                  color: "#f0f0f0",
+                  fontSize: 16,
+                  fontFamily: "font-regular",
+                }}
                 placeholder="••••••••••••"
                 placeholderTextColor="hsl(30 6% 60%)"
                 value={password}

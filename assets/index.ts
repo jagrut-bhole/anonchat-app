@@ -1,5 +1,2 @@
-import mask from './mainImages/mask.png';
-
-export default {
-    themeImage: mask
-}
+export const mask = require("./mainImages/mask.png");
+export default mask;
